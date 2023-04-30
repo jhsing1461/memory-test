@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <h1>Memory Demo</h1>
+    <div id="inputArea">
+        <label for="emailInput">Enter your email (required):</label>
+        <input id="emailInput" type="email" placeholder="Enter your email" />
+
+        <label for="apiKeyInput">API Key (required):</label>
+        <input id="apiKeyInput" type="text" placeholder="Enter your API key" />
+    </div>
+    
+    <div id="responseContainer">
+        <div class="responseBox">
+            <h3>No Memory</h3>
+            <div class="historyContainer"></div>
+        </div>
+        <div class="responseBox">
+            <h3>Short-Term</h3>
+            <div class="historyContainer"></div>
+        </div>
+        <div class="responseBox">
+            <h3>Long-Term</h3>
+            <div class="historyContainer"></div>
+        </div>
+        <div class="responseBox">
+            <h3>Short-Term + Long-Term</h3>
+            <div class="historyContainer"></div>
+        </div>
+    </div>
+    <div id="inputAreaBottom">
+        <input id="userInput" type="text" placeholder="Type your input here" />
+        <button id="submitButton">Submit</button>
+    </div>
+</body>
+</html>

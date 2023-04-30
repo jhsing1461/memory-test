@@ -1,0 +1,103 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #575757;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: #27ae60;
+  }
+  
+  #inputArea,
+  #inputAreaBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  
+  input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid #27ae60;
+    border-radius: 4px;
+    background-color: #333;
+    color: #27ae60;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #27ae60;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #27ae60;
+    border-radius: 4px;
+    background-color: #27ae60;
+    color: #575757;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2ecc71;
+  }
+  
+  #responseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+  }
+  
+  .responseBox {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .responseBox h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #27ae60;
+  }
+  
+  .historyContainer {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .messageWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #444;
+    padding: 0.5rem 0;
+  }
+  
+  .userRow {
+    background-color: #5e5e5eba;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .aiRow {
+    background-color: #4a4949;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
