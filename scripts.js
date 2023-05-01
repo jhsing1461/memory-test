@@ -19,20 +19,21 @@ document.getElementById("submitButton").addEventListener("click", async function
     userInput.value = "";
   
     const urls = [
-      "http://127.0.0.1:8000/no-memory",
-      "http://127.0.0.1:8000/short-term",
-      "http://127.0.0.1:8000/long-term",
-      "http://127.0.0.1:8000/short-long-term",
+      "https://memory-demo.fly.dev/no_memory/",
+      "https://memory-demo.fly.dev/short_term_memory/",
+      "https://memory-demo.fly.dev/long_term_memory/",
+      "https://memory-demo.fly.dev/short_long_term_memory/",
     ];
 
     const requests = urls.map((url) =>
       fetch(url, {
         method: "POST",
+        followAllRedirects: true,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
-        body: JSON.stringify({ email: email, input: message, api_key: apiKey}),
+        body: JSON.stringify({ email: email, user_message: message, api_key: apiKey}),
       })
     );
   
@@ -46,7 +47,7 @@ document.getElementById("submitButton").addEventListener("click", async function
       userRow.className = "userRow";
       const userInputText = document.createElement("span");
       userInputText.style.color = "#27ae60";
-      userInputText.textContent = `User: ${message}`;
+      userInputText.textContent = `${message}`;
       userRow.appendChild(userInputText);
       messageWrapper.appendChild(userRow);
   
@@ -60,7 +61,8 @@ document.getElementById("submitButton").addEventListener("click", async function
           const responseData = await response.json();
           const responseText = document.createElement("span");
           responseText.style.color = response.ok ? "#27ae60" : "red";
-          responseText.textContent = `AI: ${responseData.response}`;
+          responseText.style.whiteSpace = "pre";
+          responseText.textContent = `${responseData.response}`;
           aiRow.appendChild(responseText);
   
           messageWrapper.appendChild(aiRow);
